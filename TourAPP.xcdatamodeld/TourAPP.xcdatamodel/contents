@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="City" representedClassName="City" syncable="YES">
+        <attribute name="cdescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="cistourcity" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="clatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="clongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cpingying" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="csuoxie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cupdatedate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="city_hotel" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Hotel" inverseName="hotel_city" inverseEntity="Hotel" syncable="YES"/>
+        <relationship name="city_news" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="News" syncable="YES"/>
+        <relationship name="city_pic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CityPic" syncable="YES"/>
+        <relationship name="city_restautrant" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Restaurant" inverseName="restautant_city" inverseEntity="Restaurant" syncable="YES"/>
+        <relationship name="city_scenic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Scenic" inverseName="scenic_city" inverseEntity="Scenic" syncable="YES"/>
+        <relationship name="city_tra" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Traaddress" inverseName="city_tra" inverseEntity="Traaddress" syncable="YES"/>
+    </entity>
+    <entity name="CityPic" representedClassName="CityPic" syncable="YES">
+        <attribute name="cid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="cpicpath" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Equipment" representedClassName="Equipment" syncable="YES">
+        <attribute name="cid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="ename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="eqiupments_equipment" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Equipment" inverseName="equipment_equipments" inverseEntity="Equipment" syncable="YES"/>
+        <relationship name="equipment_equipments" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Equipment" inverseName="eqiupments_equipment" inverseEntity="Equipment" syncable="YES"/>
+        <relationship name="scenic_equipment" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Scenic" inverseName="scenic_equipment" inverseEntity="Scenic" syncable="YES"/>
+    </entity>
+    <entity name="FoodType" representedClassName="FoodType" syncable="YES">
+        <attribute name="createdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="fname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="restautant_type" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Restaurant" inverseName="restautant_type" inverseEntity="Restaurant" syncable="YES"/>
+    </entity>
+    <entity name="Hotel" representedClassName="Hotel" syncable="YES">
+        <attribute name="cid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="hcontactnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hdescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="hlatitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="hlongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="hmaxprice" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="hminprice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="hname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hraddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hroonnumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="hstar" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="hupdatedate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="hurl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hotel_city" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="city_hotel" inverseEntity="City" syncable="YES"/>
+        <relationship name="hotel_pic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HotelPic" syncable="YES"/>
+    </entity>
+    <entity name="HotelPic" representedClassName="HotelPic" syncable="YES">
+        <attribute name="hid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="hpicpath" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="News" representedClassName="News" syncable="YES">
+        <attribute name="cid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="ncontent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ncreatedate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nexpirydate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="news_newspic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NewsPic" syncable="YES"/>
+    </entity>
+    <entity name="NewsPic" representedClassName="NewsPic" syncable="YES">
+        <attribute name="ndescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="npicpath" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Pro_Country" representedClassName="Pro_Country" syncable="YES">
+        <attribute name="createdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="ischina" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="pro_city" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City" syncable="YES"/>
+    </entity>
+    <entity name="Restaurant" representedClassName="Restaurant" syncable="YES">
+        <attribute name="cid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="raddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raveprice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rcontactnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rdescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="rlatitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="rlongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rupdatedate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="rurl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="restaurant_food" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Specialfood" syncable="YES"/>
+        <relationship name="restaurant_pic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RestaurantPic" syncable="YES"/>
+        <relationship name="restautant_city" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="City" inverseName="city_restautrant" inverseEntity="City" syncable="YES"/>
+        <relationship name="restautant_type" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FoodType" inverseName="restautant_type" inverseEntity="FoodType" syncable="YES"/>
+    </entity>
+    <entity name="RestaurantPic" representedClassName="RestaurantPic" syncable="YES">
+        <attribute name="rid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="rpicpath" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Scenic" representedClassName="Scenic" syncable="YES">
+        <attribute name="cid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="saddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sadultticket" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="schildrenticket" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="scontactnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sdesciotion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="slatitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="slongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="supdatedate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="surl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="scenic_city" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="City" inverseName="city_scenic" inverseEntity="City" syncable="YES"/>
+        <relationship name="scenic_equipment" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Equipment" inverseName="scenic_equipment" inverseEntity="Equipment" syncable="YES"/>
+        <relationship name="scenic_scenicpic" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="ScenicPic" syncable="YES"/>
+        <relationship name="scenic_type" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScenicType" inverseName="typr_scenic" inverseEntity="ScenicType" syncable="YES"/>
+    </entity>
+    <entity name="ScenicPic" representedClassName="ScenicPic" syncable="YES">
+        <attribute name="sid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="spicpath" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ScenicType" representedClassName="ScenicType" syncable="YES">
+        <attribute name="createdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="stype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="typr_scenic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Scenic" inverseName="scenic_type" inverseEntity="Scenic" syncable="YES"/>
+    </entity>
+    <entity name="Specialfood" representedClassName="Specialfood" syncable="YES">
+        <attribute name="rid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spicpath" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SystemUpdate" representedClassName="SystemUpdate" syncable="YES">
+        <attribute name="sid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tableName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="update" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Traaddress" representedClassName="Traaddress" syncable="YES">
+        <attribute name="cid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="taddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tlatitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="tlongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ttid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="city_tra" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="City" inverseName="city_tra" inverseEntity="City" syncable="YES"/>
+        <relationship name="travelagency_address" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Travelagency" inverseName="travelagency_address" inverseEntity="Travelagency" syncable="YES"/>
+    </entity>
+    <entity name="Travelagency" representedClassName="Travelagency" syncable="YES">
+        <attribute name="tdescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="turl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="travelagency_address" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Traaddress" inverseName="travelagency_address" inverseEntity="Traaddress" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="uemail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="upassword" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="City" positionX="-281" positionY="302" width="128" height="283"/>
+        <element name="CityPic" positionX="-351" positionY="621" width="128" height="73"/>
+        <element name="Equipment" positionX="306" positionY="221" width="128" height="165"/>
+        <element name="FoodType" positionX="241" positionY="630" width="128" height="118"/>
+        <element name="Hotel" positionX="-218" positionY="746" width="128" height="283"/>
+        <element name="HotelPic" positionX="115" positionY="917" width="128" height="73"/>
+        <element name="News" positionX="-81" positionY="90" width="128" height="133"/>
+        <element name="NewsPic" positionX="135" positionY="161" width="128" height="88"/>
+        <element name="Pro_Country" positionX="-297" positionY="81" width="128" height="133"/>
+        <element name="Restaurant" positionX="-29" positionY="531" width="128" height="268"/>
+        <element name="RestaurantPic" positionX="126" positionY="549" width="128" height="73"/>
+        <element name="Scenic" positionX="-92" positionY="275" width="128" height="283"/>
+        <element name="ScenicPic" positionX="180" positionY="251" width="128" height="73"/>
+        <element name="ScenicType" positionX="313" positionY="459" width="128" height="118"/>
+        <element name="Specialfood" positionX="232" positionY="767" width="128" height="88"/>
+        <element name="SystemUpdate" positionX="-405" positionY="764" width="128" height="88"/>
+        <element name="Traaddress" positionX="313" positionY="932" width="128" height="178"/>
+        <element name="Travelagency" positionX="-99" positionY="1088" width="128" height="118"/>
+        <element name="User" positionX="-243" positionY="-180" width="128" height="103"/>
+    </elements>
+</model>

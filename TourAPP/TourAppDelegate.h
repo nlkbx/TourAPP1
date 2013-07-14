@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataManage.h"
+#import "Reachability.h"
+#import "MyHttpRequest.h"
+@interface TourAppDelegate : UIResponder <UIApplicationDelegate,UIApplicationDelegate>
 
-@interface TourAppDelegate : UIResponder <UIApplicationDelegate>
+{
+    DataManage *dm;
+    NSMutableData *_data;
+    
+    
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -13,3 +13,49 @@
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
 #endif
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#define HOST @"http://192.168.1.221/"
+#define TAOBAOHOST @"http://gw.api.taobao.com/"
+#define SERVERURL @"http://192.168.1.221:80/Service.asmx/"
+#define APPKEY @"21553496"
+#define APPSECRET @"3c3d5fc70623776a7d40f154a2e5c9b1"
+#define CALLBACKURL @"appcallback://"
+#define PRO_COUNTRY @"Pro_Country"
+#define PRO_COUNTRY_CREATEDATE @"createdate"
+#define PRO_COUNTRY_UPDATEDATE @"updatedate"
+#define PRO_COUNTRY_PID @"pid"
+#define PRO_COUNTRY_PNAME @"pname"
+#define PRO_COUNTRY_ISCHINA @"ischina"
+
+#define FOODTYPE @"FoodType"
+#define FOODTYPE_FID @"fid"
+#define FOODTYPE_FNAME @"fname"
+#define FOODTYPE_CREATEDATE @"createdate"
+#define FOODTYPE_UPDATEDATE @"updatedate"
+
+#define EQUIPMENT @"Equipment"
+#define EQUIPMENT_EID @"eid"
+#define EQUIPMENT_ENAME @"ename"
+#define EQUIPMENT_FATHEREID @"fathereid"
+#define EQUIPMENT_CREATEDATE @"createdate"
+#define EQUIPMENT_UPDATEDATE @"updatedate"
+#define EQUIPMENT_CID @"cid"
+
+#define SCENICTYPE @"ScenicType"
+#define SCENICTYPE_SID @"sid"
+#define SCENICTYPE_STYPE @"stype"
+#define SCENICTYPE_CREATEDATE @"createdate"
+#define SCENICTYPE_UPDATEDATE @"updatedate"
+
+#define SYSTEMUPDATE @"SystemUpdate"
+#define GETTABLEUPDATEDATE @"getTableUpdateDate"
+#define TABLENAME @"tablename"
+
+#define UPDATEDATE @"updatetime"
+#define DATEFORMAT @"yyyy/MM/dd HH:mm:ss"
+#define GETSYSTEMTABLEUPDATEDATA @"getSystemTableUpdateData"
+#define GETSYSTEMTABLEUPDATEDATAPARAM @"lastupdatedate"
+
+#define GETITEMLISTBYEID @"getItemListByEid"
+#define GETITEMLISTBYEIDEID @"eid"
