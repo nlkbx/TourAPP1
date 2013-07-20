@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DataManage.h"
 #import "DropDownList.h"
-@interface EquipmentViewController : UIViewController<DataManageDelegate,DropDownListDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface EquipmentViewController : UIViewController<DataManageDelegate,DropDownListDelegate,UITableViewDataSource,UITableViewDelegate,DropDownViewDelegate>
 {
     NSArray* equipmentArr;
     NSMutableArray *childrenEquipment;

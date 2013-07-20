@@ -1,29 +1,32 @@
 //
-//  DropDownList.h
-//  dropdownTest
+//  DropDownList1.h
+//  TourAPP
 //
-//  Created by 徐彪 on 13-6-25.
-//  Copyright (c) 2013年 徐彪. All rights reserved.
+//  Created by 徐彪 on 13-7-15.
+//  Copyright (c) 2013年 Tour. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "Label_IconView.h"
 #import "DropDownView.h"
-@protocol DropDownListDelegate
-- (void) SelectIndexChanged:(NSInteger)index;
-@end
-@interface DropDownList :DropDownView <UITableViewDelegate,UITableViewDataSource,DropDownViewDelegate>
+#import "Label_IconView.h"
+@protocol DropDownListDelegate;
+@interface DropDownList : DropDownView<UITableViewDelegate,UITableViewDataSource,DropDownViewDelegate>
 {
-    UITableView *tableview;
-    NSInteger selectindex;
-    Label_IconView *view;
+    UITableView *tableView;
+    NSMutableArray* selectindexs;
+    BOOL selectedChanged;
 }
 
-@property(nonatomic,assign)CGFloat tableHeight;
+@property(nonatomic,assign)BOOL multselect;
+@property(nonatomic,assign)BOOL firstSelectIsAll;
 @property(nonatomic,retain)NSArray* dataSource;
-@property(nonatomic,assign)id<DropDownListDelegate> delegate;
-- (id)initWithFrame:(CGRect)frame dataSource:(NSArray*) dataSource delegate:(id<DropDownListDelegate>) delegate;
-
-
-
+@property(nonatomic,assign)CGFloat tableViewHeight;
+@property(nonatomic,assign)CGFloat tableViewCellHeight;
+@property(nonatomic,retain)UIColor* selectedTextColor;
+@property(nonatomic,retain)UIImage* selectedTextIcon;
+@property(nonatomic,assign)id<DropDownListDelegate> dropDownListDelegate;
+- (id)initWithMainView:(Label_IconView*)mainview;
+@end
+@protocol DropDownListDelegate <NSObject>
+- (void) SelectIndexChanged:(NSInteger)index forDropDownList:(DropDownList*) dropdownlist;
+-(void)tableViewDisappear:(NSArray*) selectindexs forDropDownList:(DropDownList*) dropdownlist;
 @end

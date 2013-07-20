@@ -39,8 +39,7 @@
         if(!isshow)
         {
             if(self.superview!=nil)
-            [ self.superview addSubview:downview];
-          
+                [ self.superview addSubview:downview];
             downview.frame=CGRectMake(downview.frame.origin.x,self.frame.origin.y+self.frame.size.height, downview.frame.size.width, 0);
             [self.superview addSubview:downview];
             [UIView beginAnimations:nil context:nil];
@@ -61,10 +60,9 @@
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
     downview.frame=CGRectMake(downview.frame.origin.x,self.frame.origin.y+self.frame.size.height, downview.frame.size.width, 0);
-    [UIView commitAnimations];
-    
     if(downview.superview !=nil)
         [downview removeFromSuperview];
+    [UIView commitAnimations];
     if([dropDownViewDelegate respondsToSelector:@selector(hiddenDownView:)]){
         [dropDownViewDelegate hiddenDownView:self];
     }

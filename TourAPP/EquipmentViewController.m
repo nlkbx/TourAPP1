@@ -9,6 +9,7 @@
 #import "EquipmentViewController.h"
 #import "Equipment.h"
 #import "itemListViewController.h"
+#import "ProjectPublicMethod.h"
 @interface EquipmentViewController ()
 
 @end
@@ -32,14 +33,33 @@
 {
     [super viewDidLoad];
    [self searchEquipMents];
-    DropDownList *dropdownlist=[[DropDownList alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 30) dataSource:equipmentNames delegate:self];
-    [self.view addSubview:dropdownlist];
+   
+    Label_IconView *sortMainView=[ProjectPublicMethod getDropDownViewMainView:@"排序" frame:CGRectMake(0, 0, SCREENWIDTH, 30)];
+    DropDownList *sortdropdown=[[DropDownList alloc]initWithMainView:sortMainView];;
+    [self.view addSubview:sortdropdown];
+    sortdropdown.dataSource=equipmentNames;
+    sortdropdown.tableViewHeight=equipmentNames.count*30;;
+    sortdropdown.tableViewCellHeight=30;
+    sortdropdown.dropDownListDelegate=self;
+    sortdropdown.dropDownViewDelegate=self;
   
     tableview =[[UITableView alloc]initWithFrame:CGRectMake(0, 30, SCREENWIDTH, SCREENHEIGHT-44-20-49-30)];
     [self.view addSubview:tableview];
     tableview.dataSource=self;
     tableview.delegate=self;
     // Do any additional setup after loading the view from its nib.
+}
+-(void)showDownView:(DropDownView *)view{
+    Label_IconView *label_icon=view.mainview;
+    label_icon.backgroudImage=[UIImage imageNamed:@"black"];
+    label_icon.iconImage=[UIImage imageNamed:@"up"];
+    
+}
+-(void)hiddenDownView:(DropDownView *)view{
+    Label_IconView *label_icon=view.mainview;
+    label_icon.backgroudImage=[UIImage imageNamed:@"lightblack"];
+    label_icon.iconImage=[UIImage imageNamed:@"down"];
+    
 }
 -(void)searchEquipMents{
     equipmentArr=[dm Query:EQUIPMENT forTag:100 userInfo:nil];
@@ -64,7 +84,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)SelectIndexChanged:(NSInteger)index{
+-(void)SelectIndexChanged:(NSInteger)index forDropDownList:(DropDownList *)dropdownlist{
     if(index!=0){
         
         [tableview scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:index-1] atScrollPosition:UITableViewScrollPositionTop animated:YES];

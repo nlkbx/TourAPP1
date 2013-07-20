@@ -20,4 +20,13 @@
 +(id)NSDictionaryToObject:(NSDictionary*)dictionary Object:(NSObject*)object;
 //将多层嵌套的NSDictionary层层剥皮得到需要的值
 +(id)PeelOfftheSkin:(NSArray*)dictionaryKeys dictionary:(NSDictionary*)dictionary;
+//截取字符串
++(NSString*)SubString:(NSString*) string withHelps:(NSArray*) subStringHelpers;
++(NSInteger)getIntegerFromArray:(NSArray*)array index:(NSUInteger)index;
+@end
+@interface SubStringHelper : NSObject
+@property(nonatomic,copy)NSString* substring;
+@property(nonatomic,assign)BOOL before;
+@property(nonatomic,assign)BOOL keepsubstring;
+-(id)initWithSubString:(NSString*) _substring before:(BOOL)_before keepsubstring:(BOOL)_keepsubstring;
 @end

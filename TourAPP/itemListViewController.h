@@ -10,19 +10,23 @@
 
 #import "Equipment.h"
 #import "WaterFlowView.h"
-#import "DropDownView.h"
-@interface itemListViewController : UIViewController<WaterFlowViewDelegate,DropDownViewDelegate>
+#import "DropDownList.h"
+@class Taobao_item_prop;
+@interface itemListViewController : UIViewController<WaterFlowViewDelegate,DropDownViewDelegate,UITableViewDataSource,UITableViewDelegate,DropDownListDelegate,DropDownViewDelegate>
 {
     
     UIActivityIndicatorView *load;
     NSMutableArray *items;
     WaterFlowView *waterflow;
-    NSMutableArray *watercells;
     NSMutableArray* filteritems;
     NSInteger loaedindex;
     NSInteger hadloadcount;
     NSMutableArray *loadDataImages;
-
+    NSArray* sortArr;
+    NSInteger sortindex;
+    Taobao_item_prop* item_prop;
+    NSMutableDictionary* brands;
+  
 }
 @property (nonatomic,retain)Equipment *equipment;
 @end

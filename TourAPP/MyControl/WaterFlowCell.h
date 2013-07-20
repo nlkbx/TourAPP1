@@ -18,4 +18,5 @@ typedef NSUInteger LabelViewLocation;
 @property(nonatomic,retain)UIView *contentView;
 @property(nonatomic,retain)UIView *labelView;
 @property(nonatomic,assign)LabelViewLocation labelViewLocation;
+@property(nonatomic,retain)id item;
 @end

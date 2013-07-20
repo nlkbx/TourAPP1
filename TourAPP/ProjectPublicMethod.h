@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Reachability.h"
+#import "Label_IconView.h"
+#import "DropDownView.h"
 @interface ProjectPublicMethod : NSObject
 +(void)checkNetworkStatus:(NSString*)host target:(id)target success:(SEL)successSel fail:(SEL)failSel;
++(Label_IconView*)getDropDownViewMainView:(NSString*)text frame:(CGRect)frame;
 @end

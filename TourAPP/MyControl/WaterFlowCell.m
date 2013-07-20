@@ -9,7 +9,7 @@
 #import "WaterFlowCell.h"
 
 @implementation WaterFlowCell
-@synthesize contentView,labelView,labelViewLocation;
+@synthesize contentView,labelView,labelViewLocation,item;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

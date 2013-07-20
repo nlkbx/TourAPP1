@@ -39,6 +39,8 @@
 		A1D14E96176C3AEE000F4BFF /* TourAPP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1D14E94176C3AED000F4BFF /* TourAPP.xcdatamodeld */; };
 		A1E4EA3E17910B8800AB6079 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E4EA3D17910B8800AB6079 /* Reachability.m */; };
 		B509C7481778919800E0324F /* EquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C7461778919800E0324F /* EquipmentViewController.m */; };
+		B5534D3F1794241700CB63DF /* DropDownList.m in Sources */ = {isa = PBXBuildFile; fileRef = B5534D3E1794241700CB63DF /* DropDownList.m */; };
+		B5534D401794241700CB63DF /* DropDownList.m in Sources */ = {isa = PBXBuildFile; fileRef = B5534D3E1794241700CB63DF /* DropDownList.m */; };
 		B557623A1771DB7F003B0AB0 /* HotelPic.m in Sources */ = {isa = PBXBuildFile; fileRef = B55762391771DB7F003B0AB0 /* HotelPic.m */; };
 		B557623D1771DB7F003B0AB0 /* Travelagency.m in Sources */ = {isa = PBXBuildFile; fileRef = B557623C1771DB7F003B0AB0 /* Travelagency.m */; };
 		B55762401771DB80003B0AB0 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = B557623F1771DB7F003B0AB0 /* News.m */; };
@@ -69,6 +71,9 @@
 		B56F6DBA1791B07900000141 /* separate.png in Resources */ = {isa = PBXBuildFile; fileRef = B56F6DB81791B07900000141 /* separate.png */; };
 		B59A843417894A1E003CBF6A /* Equipment.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A843317894A1E003CBF6A /* Equipment.m */; };
 		B59A843817895CE6003CBF6A /* Taobao_item.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A843717895CE6003CBF6A /* Taobao_item.m */; };
+		B5A5C87217957B6800B64E02 /* Taobao_item_prop.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C87117957B6800B64E02 /* Taobao_item_prop.m */; };
+		B5A5C87517957C1600B64E02 /* prop_value.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C87417957C1600B64E02 /* prop_value.m */; };
+		B5A5C87817957DB600B64E02 /* prop_values.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C87717957DB600B64E02 /* prop_values.m */; };
 		B5B0286C178DA14A0089FF01 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B02856178DA14A0089FF01 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5B0286D178DA14A0089FF01 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B02859178DA14A0089FF01 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5B0286E178DA14A0089FF01 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B0285B178DA14A0089FF01 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -84,7 +89,6 @@
 		B5B02881178DB3520089FF01 /* nopic.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B02880178DB3520089FF01 /* nopic.png */; };
 		B5B6A3F0177B1B190009693C /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B6A3E7177B1B190009693C /* black.png */; };
 		B5B6A3F1177B1B190009693C /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B6A3E8177B1B190009693C /* down.png */; };
-		B5B6A3F2177B1B190009693C /* DropDownList.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B6A3EA177B1B190009693C /* DropDownList.m */; };
 		B5B6A3F3177B1B190009693C /* gou.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B6A3EB177B1B190009693C /* gou.png */; };
 		B5B6A3F4177B1B190009693C /* Label_IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B6A3ED177B1B190009693C /* Label_IconView.m */; };
 		B5B6A3F5177B1B190009693C /* lightblack.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B6A3EE177B1B190009693C /* lightblack.png */; };
@@ -175,6 +179,8 @@
 		A1E4EA3D17910B8800AB6079 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		B509C7451778919800E0324F /* EquipmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentViewController.h; sourceTree = "<group>"; };
 		B509C7461778919800E0324F /* EquipmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentViewController.m; sourceTree = "<group>"; };
+		B5534D3D1794241700CB63DF /* DropDownList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownList.h; sourceTree = "<group>"; };
+		B5534D3E1794241700CB63DF /* DropDownList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownList.m; sourceTree = "<group>"; };
 		B55762381771DB7F003B0AB0 /* HotelPic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotelPic.h; path = ../model/HotelPic.h; sourceTree = "<group>"; };
 		B55762391771DB7F003B0AB0 /* HotelPic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelPic.m; path = ../model/HotelPic.m; sourceTree = "<group>"; };
 		B557623B1771DB7F003B0AB0 /* Travelagency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Travelagency.h; path = ../model/Travelagency.h; sourceTree = "<group>"; };
@@ -225,6 +231,12 @@
 		B59A843317894A1E003CBF6A /* Equipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Equipment.m; sourceTree = "<group>"; };
 		B59A843617895CE6003CBF6A /* Taobao_item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Taobao_item.h; sourceTree = "<group>"; };
 		B59A843717895CE6003CBF6A /* Taobao_item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Taobao_item.m; sourceTree = "<group>"; };
+		B5A5C87017957B6800B64E02 /* Taobao_item_prop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Taobao_item_prop.h; sourceTree = "<group>"; };
+		B5A5C87117957B6800B64E02 /* Taobao_item_prop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Taobao_item_prop.m; sourceTree = "<group>"; };
+		B5A5C87317957C1600B64E02 /* prop_value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prop_value.h; sourceTree = "<group>"; };
+		B5A5C87417957C1600B64E02 /* prop_value.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prop_value.m; sourceTree = "<group>"; };
+		B5A5C87617957DB600B64E02 /* prop_values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prop_values.h; sourceTree = "<group>"; };
+		B5A5C87717957DB600B64E02 /* prop_values.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prop_values.m; sourceTree = "<group>"; };
 		B5B02855178DA14A0089FF01 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		B5B02856178DA14A0089FF01 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		B5B02857178DA14A0089FF01 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -252,8 +264,6 @@
 		B5B02880178DB3520089FF01 /* nopic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nopic.png; sourceTree = "<group>"; };
 		B5B6A3E7177B1B190009693C /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		B5B6A3E8177B1B190009693C /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
-		B5B6A3E9177B1B190009693C /* DropDownList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownList.h; sourceTree = "<group>"; };
-		B5B6A3EA177B1B190009693C /* DropDownList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownList.m; sourceTree = "<group>"; };
 		B5B6A3EB177B1B190009693C /* gou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gou.png; sourceTree = "<group>"; };
 		B5B6A3EC177B1B190009693C /* Label_IconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Label_IconView.h; sourceTree = "<group>"; };
 		B5B6A3ED177B1B190009693C /* Label_IconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Label_IconView.m; sourceTree = "<group>"; };
@@ -552,6 +562,12 @@
 			children = (
 				B59A843617895CE6003CBF6A /* Taobao_item.h */,
 				B59A843717895CE6003CBF6A /* Taobao_item.m */,
+				B5A5C87017957B6800B64E02 /* Taobao_item_prop.h */,
+				B5A5C87117957B6800B64E02 /* Taobao_item_prop.m */,
+				B5A5C87317957C1600B64E02 /* prop_value.h */,
+				B5A5C87417957C1600B64E02 /* prop_value.m */,
+				B5A5C87617957DB600B64E02 /* prop_values.h */,
+				B5A5C87717957DB600B64E02 /* prop_values.m */,
 			);
 			name = TaobaoModel;
 			sourceTree = "<group>";
@@ -594,8 +610,6 @@
 				B5DEECFB178C458B0008E997 /* WaterFlowView.m */,
 				B5B6A3E7177B1B190009693C /* black.png */,
 				B5B6A3E8177B1B190009693C /* down.png */,
-				B5B6A3E9177B1B190009693C /* DropDownList.h */,
-				B5B6A3EA177B1B190009693C /* DropDownList.m */,
 				B5B6A3EB177B1B190009693C /* gou.png */,
 				B5B6A3EC177B1B190009693C /* Label_IconView.h */,
 				B5B6A3ED177B1B190009693C /* Label_IconView.m */,
@@ -603,6 +617,8 @@
 				B5B6A3EF177B1B190009693C /* up.png */,
 				B56F6DB41791A69700000141 /* DropDownView.h */,
 				B56F6DB51791A69700000141 /* DropDownView.m */,
+				B5534D3D1794241700CB63DF /* DropDownList.h */,
+				B5534D3E1794241700CB63DF /* DropDownList.m */,
 			);
 			path = MyControl;
 			sourceTree = "<group>";
@@ -860,7 +876,6 @@
 				B55E1CAA177495010022BC1D /* TabBarViewController.m in Sources */,
 				B55E1CB71774A0880022BC1D /* MainViewController.m in Sources */,
 				B509C7481778919800E0324F /* EquipmentViewController.m in Sources */,
-				B5B6A3F2177B1B190009693C /* DropDownList.m in Sources */,
 				B5B6A3F4177B1B190009693C /* Label_IconView.m in Sources */,
 				A1A01F75177EB6C500C56F3D /* itemListViewController.m in Sources */,
 				B5E0262B1780456800398C05 /* JSONKit.m in Sources */,
@@ -880,6 +895,10 @@
 				B5B88493178ED99600D039E5 /* ItemDetailViewController.m in Sources */,
 				A1E4EA3E17910B8800AB6079 /* Reachability.m in Sources */,
 				B56F6DB61791A69700000141 /* DropDownView.m in Sources */,
+				B5534D3F1794241700CB63DF /* DropDownList.m in Sources */,
+				B5A5C87217957B6800B64E02 /* Taobao_item_prop.m in Sources */,
+				B5A5C87517957C1600B64E02 /* prop_value.m in Sources */,
+				B5A5C87817957DB600B64E02 /* prop_values.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,6 +908,7 @@
 			files = (
 				A1D14E28176C38DC000F4BFF /* TourAPPTests.m in Sources */,
 				B56F6DB71791A69700000141 /* DropDownView.m in Sources */,
+				B5534D401794241700CB63DF /* DropDownList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

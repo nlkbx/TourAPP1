@@ -28,34 +28,37 @@
 
         [self addSubview:label];
         [self setframe];
-        [self addObserver:self forKeyPath:@"backgroudImage" options:NSKeyValueObservingOptionNew context:nil];
-        [self addObserver:self forKeyPath:@"iconImage" options:NSKeyValueObservingOptionNew context:nil];
-        [self addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
-        [self addObserver:self forKeyPath:@"margin" options:NSKeyValueObservingOptionNew context:nil];
-        [self addObserver:self forKeyPath:@"iconsize" options:NSKeyValueObservingOptionNew context:nil];
-        [self addObserver:self forKeyPath:@"textcolor" options:NSKeyValueObservingOptionNew context:nil];
-        [self addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
-    }
+            }
     return self;
 }
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    if([keyPath compare:@"backgroudImage"]==NSOrderedSame){
-        backgroudview.image=backgroudImage;
-    }else if([keyPath compare:@"iconImage"]==NSOrderedSame){
-        iconview.image=iconImage;
-    }else if([keyPath compare:@"text"]==NSOrderedSame){
-        label.text=text;
-    }else if([keyPath compare:@"margin"]==NSOrderedSame){
-        [self setframe];
-    }else if([keyPath compare:@"iconsize"]==NSOrderedSame){
-        [self setframe];
-    }  else if([keyPath compare:@"textcolor"]==NSOrderedSame){
-        label.textColor=textcolor;
-        
-    }else if([keyPath compare:@"frame"]==NSOrderedSame){
-        [self setframe];
-        
-    }
+
+-(void)setBackgroudImage:(UIImage *)_backgroudImage{
+    backgroudImage=_backgroudImage;
+     backgroudview.image=backgroudImage;
+}
+-(void)setIconImage:(UIImage *)_iconImage{
+    iconImage=_iconImage;
+    iconview.image=iconImage;
+}
+-(void)setText:(NSString *)_text{
+    text=_text;
+    label.text=text;
+}
+-(void)setMargin:(CGFloat)_margin{
+    margin=_margin;
+    [self setframe];
+}
+-(void)setIconsize:(CGSize)_iconsize{
+    iconsize=_iconsize;
+    [self setframe];
+}
+-(void)setFrame:(CGRect)_frame{
+    [super setFrame:_frame];
+    [self setframe];
+}
+-(void)setTextcolor:(UIColor *)_textcolor{
+    textcolor=_textcolor;
+    label.textColor=textcolor;
 }
 -(void)setframe{
     CGSize viewsize=self.frame.size;

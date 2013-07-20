@@ -48,8 +48,6 @@
 -(void)setFootview:(UIView *)_footview{
     footview=_footview;
     footview.frame=CGRectZero;
-    
-
 }
 -(void)addCells:(NSInteger) startIndex{
     CGFloat colunmwidth=(self.frame.size.width-(_colunmCount+1)*_separation)/_colunmCount;
