@@ -15,7 +15,7 @@
 @interface itemListViewController : UIViewController<WaterFlowViewDelegate,DropDownViewDelegate,UITableViewDataSource,UITableViewDelegate,DropDownListDelegate,DropDownViewDelegate>
 {
     
-    UIImageView *load;
+    UIActivityIndicatorView *load;
     NSMutableArray *items;
     WaterFlowView *waterflow;
     NSMutableArray* filteritems;
