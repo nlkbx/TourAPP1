@@ -36,9 +36,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    load=[[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(SCREENWIDTH/2-25, SCREENHEIGHT/2-98, 50,50)];
-    [load startAnimating];
+    load=[[UIImageView alloc]initWithFrame:CGRectMake(SCREENWIDTH/2-25, SCREENHEIGHT/2-98, 50,50)];
+
+
+    load.animationImages=@[[UIImage imageNamed:@"1.jpg"],
+                           [UIImage imageNamed:@"2.jpg"],
+                           [UIImage imageNamed:@"3.jpg"],
+                           [UIImage imageNamed:@"4.jpg"],
+                           [UIImage imageNamed:@"5.jpg"],
+                           [UIImage imageNamed:@"6.jpg"],
+                           [UIImage imageNamed:@"7.jpg"],
+                           [UIImage imageNamed:@"8.jpg"]];
+     [load startAnimating];
+//    load=[[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(SCREENWIDTH/2-50, SCREENHEIGHT/2-98, 100,100)];
+//    load.backgroundColor=[UIColor grayColor];
+//    [load startAnimating];
     [self.view addSubview:load];
     [ProjectPublicMethod checkNetworkStatus:@"http://www.baidu.com/" target:self success:@selector(connectHost) fail:@selector(connectHost)];
     UIImageView *backimage=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"back"]];
